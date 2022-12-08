@@ -25,5 +25,13 @@ function regexReplace() {
     res = 'javascript'.replace(/(java)(?:script)/, `$2-$1`) 
     console.log(res); // "$2-java"
 
+    // str="https://www.youtube.com/watch?v=xO8QCKNtxag";
+    // str="https://youtu.be/xO8QCKNtxag"
+    // var youtubeRegex = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    // res = str.match(youtubeRegex)
+    // console.log(res);
+    // console.log(res[7]);
+
+
 }
 export default regexReplace;
