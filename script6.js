@@ -36,10 +36,25 @@ function regexCapture() {
     // 역 검색 플래그가 있는 경우에는 모든 검색 결과를 배열로 반환
     
     str = "1st, 2nd, 3rd"
-    pattern = /+d/g 
+    pattern = /\d/g 
+    // exec()는 global 플래그를 설정해도 일치하는 첫번째 값 반환 
     res = pattern.exec(str);
-    console.log(res);
+    console.log(res);  // ["1"]
 
 
+    // match는 global 플래그가 있으면 모두 반환
+    res = str.match(pattern);
+    console.log(res);  // ["1","2","3"]
+
+    // exec()를 여러번 호출하며 일치하는 패턴을 차례로 출력
+    // exec를 두 번 호출
+    str = "1st, 2nd, 3rd"
+    pattern = /\d/g 
+    // exec()는 global 플래그를 설정해도 일치하는 첫번째 값 반환 
+    res = pattern.exec(str);
+    console.log(res);  // ["1"]
+    res = pattern.exec(str);
+    console.log(res);  // ["2"]
+    
 }
 export default regexCapture;

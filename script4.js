@@ -38,6 +38,17 @@ function regexSpecialChar() {
     res = str.match(/\W/g)
     console.log(res);  // [",","."]
 
+    // 슬래시(/) 찾기 
+    str = "abcd /e"
+    res = str.match(/\//)
+    console.log("슬래시 찾기");
+    console.log(res); // ["/"]
+    
+    // 역슬래시(\) 찾기 
+    str = "abcd \\s"
+    res = str.match(/\\/)
+    console.log("역슬래시")
+    console.log(res[0]);// '/'
 
 }
 
